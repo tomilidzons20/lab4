@@ -57,14 +57,14 @@ class NaZakupy:
         self.cena_jed = cena_jed
 
     def wyswietl_produkt(self):
-        return ("Nazwa produktu", self.nazwa_produktu, "Ilosc produktow", self.ilosc,
-                "Jednostka miary", self.jednostka_miary, "Cena jednostkowa", self.cena_jed)
+        return f"Nazwa produktu: {self.nazwa_produktu}, Ilosc produktow: {self.ilosc}," \
+               f" Jednostka miary: {self.jednostka_miary}, Cena jednostkowa: {self.cena_jed}"
 
     def ile_produktu(self):
-        return "Ilosc produktu", str(self.ilosc) + " " + self.jednostka_miary
+        return f"Ilosc produktu = {str(self.ilosc)} {self.jednostka_miary}"
 
     def ile_kosztuje(self):
-        return "Calosc kosztuje", self.ilosc * self.cena_jed
+        return f"Calosc kosztuje = {self.ilosc * self.cena_jed}"
 
 
 produkt = NaZakupy("Pizza pepperoni", 8, "Sztuk", 15)
